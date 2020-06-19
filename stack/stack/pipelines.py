@@ -1,8 +1,9 @@
 # Pokud byste chtěla použít tento projekt bez Flask, stačí odkomentovat tyto pipelines,
 # u pavouků místo 'from stack.stack.items import TagItem/StackItem' napsat 'from stack.items import TagItem/StackItem'
 # a u pavouků odkomentovat nastavení pro pipelines v 'custom settings'
-# následně běžte do C:\Python\StackOverflowScraper(pro windows) a (samozřejmě musíte být ve venv)
+# následně do terminálu zadejte cd stack 
 # a zadejte příkaz 'scrapy crawl stack' nebo 'scrapy crawl tag' (stack/tag záleží na tom co chcete scrapovat)
+# Vše by mělo fungovat
 
 '''from pymongo import MongoClient
 
