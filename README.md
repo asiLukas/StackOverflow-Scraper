@@ -1,6 +1,7 @@
 # TEST---PYTHON-SUMMER-INTERN
-Pokud nebudete vědět jak něco 'rozběhnout' nebo nepochopíte proč jsem něco udělal tak, jak jsem to udělal, je velká šance, že to bude někde tady napsané, pokud ne, zeptejte se mě.
-Jsou tu totiž dvě možnosti, jak tuto aplikaci 'rozběhnout'. Jo a nezapomeňte na requirements které jsou v requirements.txt
+Pokud nebudete vědět jak něco 'rozběhnout' nebo nepochopíte proč jsem něco udělal tak, jak jsem to udělal, je velká šance, že to bude někde tady napsané, pokud ne, zeptejte se mě. Jestli něco nepůjde, prosím napište mi to.
+Jsou tu totiž dvě možnosti, jak tuto aplikaci 'rozběhnout'.
+Jo a nezapomeňte na requirements které jsou v requirements.txt.
 # 1A) Aplikace s Flask frameworkem
 Na tuto možnost je vše připravené. Tedy až na databázi(o té si povíme níže).
 Takže, nejdříve vysvětlím, jak jsem to udělal a hlavně z jakého důvodu jsou některé věci tak, jak jsou. 
