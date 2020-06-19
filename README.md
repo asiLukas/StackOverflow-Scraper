@@ -4,7 +4,7 @@ Jsou tu totiž dvě možnosti, jak tuto aplikaci 'rozběhnout'.
 # 1A) Aplikace s Flask frameworkem
 Na tuto možnost je vše připravené. Tedy až na databázi(o té si povíme níže).
 Takže, nejdříve vysvětlím, jak jsem to udělal a hlavně z jakého důvodu jsou některé věci tak, jak jsou. 
-Ze všeho nejdřív si asi budete říkat: 'Proč používá Pymongo a Flask' odděleně a nepoužívá přímo flask-pymongo.
+Ze všeho nejdřív si asi budete říkat: 'Proč používá Pymongo a Flask odděleně a nepoužívá přímo flask-pymongo?'
 No.. Je to proto, protože jsem do 3/4 projektu nevěděl, že něco takového existuje.
 Dále si asi řekenete: 'Proč nepoužívá mongo databázi přímo jako output pro stránku, ale používá seznamy, z kterých pak udělá JSON.'
 Nevím, jak, to je ten důvod:D. Data se ukládájí jak do proměnných seznamů(ty ukládájí pouze posledních 50otázek), tak do mongo databáze(ta ukládá úplně všechno).
