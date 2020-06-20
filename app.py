@@ -47,6 +47,8 @@ def question_result(item):
     conn = MongoClient('localhost', 27017)  # pokud máte nějaký mongo server, nebo cokoliv, zde můžete změnit připojení
     db = conn['Questions']
     collection = db['questions']
+    if 'name' in item:
+        item['name'].pop()
     collection.insert(dict(item))
     output_data.append(dict(item))
 
