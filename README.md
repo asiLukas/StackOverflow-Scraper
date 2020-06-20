@@ -4,12 +4,12 @@ Pokud nebudete vědět jak něco 'rozběhnout' nebo nepochopíte proč jsem něc
 Jsou tu totiž dvě možnosti, jak tuto aplikaci 'rozběhnout'.
 Jo a nezapomeňte na requirements.
 # 1A) Aplikace s Flask frameworkem
-Na tuto možnost je vše připravené. Tedy až na databázi(o té si povíme níže).
+Na tuto možnost je vše připravené.
 Nejdříve vysvětlím, porč jsou některé věci tak, jak jsou. 
 Ze všeho nejdřív si asi budete říkat: 'Proč používá Pymongo a Flask odděleně a nepoužívá přímo flask-pymongo?'
 No.. Je to proto, protože jsem do 3/4 projektu nevěděl, že něco takového existuje.
 Dále si asi řekenete: 'Proč nepoužívá mongo databázi přímo jako output pro stránku, ale používá seznamy, z kterých pak udělá JSON.'
-Nevím jak, to je ten důvod :D. Data se ukládájí jak do seznamů(ty ukládájí pouze posledních 50otázek+tagy), tak do mongo databáze(ta ukládá úplně všechno).
+Na stránce se zobrazuje vše z posledních 50ti otázek, které se následně smažou a pak se při dalším načtení stránky udělají nové, v databázi se nic nemaže.
 # 1B) Jak rozběhnout mongo databázi a Flask server?
 Začneme se 'setupem' mongo databáze. V kódu je databáze nastavená na localhost na portu 27017. Pokud máte jiný server mongodb nebo cokoliv v kódu jsou komentáře, které ukazují, kde můžete změnit mongodb server(přesněji v 'app.py' a v 'stack/stack/pipelines.py')
 Pokud nemáte mongodb a potřebujete nějak pomoc, napište.
