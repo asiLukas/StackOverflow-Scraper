@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 output_data = []  # posledních 50 otázek
 input_data = []  # všechny tagy z posledních 50ti otázek
-output_data2 = []  # tagy větší než 20 znaků
+output_data2 = []  # tagy z posledních 50 otázek větší než 15 znaků
 
 crawl_runner = CrawlerRunner()
 URL_to_scrape = 'http://stackoverflow.com/questions?pagesize=50&sort=newest'
