@@ -77,7 +77,7 @@ def tag_result(item):
     if len(item['name']) > 15:
         collection.insert(dict(item))
         output_data2.append(item['name'])
-        #  Jestli chcete, vymažte ten if statement aby se  ukláday všechny tagy(nejen ty větší než 15 znaků)
+        #  Jestli chcete, vymažte ten if statement aby se  ukládaly všechny tagy(nejen ty větší než 15 znaků)
 
 
 if __name__ == "__main__":
