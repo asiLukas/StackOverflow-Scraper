@@ -15,7 +15,7 @@ class TagSpider(Spider):
         'CLOSESPIDER_TIMEOUT': 5,
         # 'ITEM_PIPELINES': {
         #    'stack.pipelines.TagPipeline': 300
-        # }  # nechápu, proč takovéto rozdělení pipelines nefungovalo s Flaskem
+        # }  
 
     }
 
