@@ -1,5 +1,5 @@
 # TEST---PYTHON-SUMMER-INTERN
-*poslední commit z 20. června opravuje bug s mongoDB, vše je teď funkční*
+*poslední commit z 20. června opravuje bug s mongoDB, vše je teď funkční(pokud ne, napište mi to, je možné že jsem se přepsal)*
 
 Pokud nebudete vědět jak něco 'rozběhnout' nebo nepochopíte proč jsem něco udělal tak, jak jsem to udělal, je velká šance, že to bude někde tady napsané, pokud ne, zeptejte se mě.
 Jsou tu totiž dvě možnosti, jak tuto aplikaci 'rozběhnout'.
