@@ -28,4 +28,4 @@ class TagSpider(Spider):
                 'text()').extract()[0]
             # if len(item['name']) > 15:
             #     yield item              
-            yield item  # Vrátí všechny tagy v posledních 50ti otázkách
+            yield item  
