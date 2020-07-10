@@ -1,9 +1,9 @@
-# Pokud byste chtěla použít tento projekt bez Flask, stačí odkomentovat tyto pipelines,
-# u pavouků místo 'from stack.stack.items import TagItem/StackItem' napsat 'from stack.items import TagItem/StackItem'
-# a u pavouků odkomentovat nastavení pro pipelines v 'custom settings'
-# přesměrujte se do složky, kde máte soubor scrapy.cfg
-# a zadejte příkaz 'scrapy crawl stack' nebo 'scrapy crawl tag' (stack/tag záleží na tom co chcete scrapovat)
-# Vše by mělo fungovat
+# If you would like to use this project without Flask, just uncomment these pipelines,
+# for spiders instead of 'from stack.stack.items import TagItem / StackItem' write 'from stack.items import TagItem / StackItem'
+# and for spiders, uncomment the settings for pipelines in 'custom settings'
+# redirect to the folder where you have the scrapy.cfg file
+# and enter the command 'scrapy crawl stack' or 'scrapy crawl tag' (stack / tag depends on what you want to scrap)
+# Everything should work
 
 '''from pymongo import MongoClient
 
@@ -13,7 +13,7 @@ class StackPipeline(object):
 
     def __init__(self):
         self.conn = MongoClient(
-            'localhost', 27017  # pokud máte nějaký mongo server, nebo cokoliv, zde můžete změnit připoje
+            'localhost', 27017  # mongo server port
         )
         db = self.conn['Questions']
         self.collection = db['questions']
@@ -28,7 +28,7 @@ class TagPipeline(object):
 
     def __init__(self):
         self.conn = MongoClient(
-            'localhost', 27017  # pokud máte nějaký mongo server, nebo cokoliv, zde můžete změnit připojení
+            'localhost', 27017  # mongo server port
         )
         db = self.conn['Questions']
         self.collection = db['tags']
