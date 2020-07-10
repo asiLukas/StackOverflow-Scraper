@@ -11,9 +11,9 @@ from pymongo import MongoClient
 crochet.setup()
 app = Flask(__name__)
 
-output_data = []  # posledních 50 otázek
-input_data = []  # všechny tagy z posledních 50ti otázek
-output_data2 = []  # tagy z posledních 50 otázek větší než 15 znaků
+output_data = []  # last 50 questions
+input_data = []  # all tags from last 50 questions
+output_data2 = []  # tags that have more than 11 characters from last 50 questions
 
 crawl_runner = CrawlerRunner()
 URL_to_scrape = 'http://stackoverflow.com/questions?pagesize=50&sort=newest'
@@ -30,7 +30,7 @@ def scrape_question():
     output_data = []
     crochet_scrape_q(URL_to_scrape=URL_to_scrape)
 
-    time.sleep(7)  # Aby náhodou nevznikla chyba(pavouk by to nemusel stihnout a nebyla by vytěžena všechna data)
+    time.sleep(7)  # Time which spider scrapes data
 
     return jsonify(output_data)  # list -> json
 
@@ -44,7 +44,7 @@ def crochet_scrape_q(URL_to_scrape):
 
 
 def question_result(item):
-    conn = MongoClient('localhost', 27017)  # pokud máte nějaký mongo server, nebo cokoliv, zde můžete změnit připojení
+    conn = MongoClient('localhost', 27017)  # mongodb server
     db = conn['Questions']
     collection = db['questions']
     if 'name' in item:
@@ -73,13 +73,13 @@ def crochet_scrape_t(URL_to_scrape):
 
 
 def tag_result(item):
-    conn = MongoClient('localhost', 27017)  # pokud máte nějaký mongo server, nebo cokoliv, zde můžete změnit připojení
+    conn = MongoClient('localhost', 27017)  # mongodb server
     db = conn['Questions']
     collection = db['tags']
     if len(item['name']) > 15:
         collection.insert(dict(item))
         output_data2.append(item['name'])
-        #  Jestli chcete, vymažte ten if statement aby se  ukládaly všechny tagy(nejen ty větší než 15 znaků)
+       
 
 
 if __name__ == "__main__":
